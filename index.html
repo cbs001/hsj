@@ -15,16 +15,16 @@
 		</div>
 		<div id="main" style="display:block">
 			<div class="card" style="margin-top:80px;display:flex">
-				<button onclick="document.getElementById('c1').scrollIntoView({behavior:'smooth'});">猪蹄</button>
-				<button onclick="document.getElementById('c2').scrollIntoView({behavior:'smooth'});">双平</button>
-				<button onclick="document.getElementById('c3').scrollIntoView({behavior:'smooth'});">中线倍长</button>
-				<button onclick="document.getElementById('c4').scrollIntoView({behavior:'smooth'});">八字</button>
-				<button onclick="document.getElementById('c5').scrollIntoView({behavior:'smooth'});">燕尾</button>
-				<button onclick="document.getElementById('c6').scrollIntoView({behavior:'smooth'});">K字</button>
-				<button onclick="document.getElementById('c7').scrollIntoView({behavior:'smooth'});">雨伞</button>
-				<button onclick="document.getElementById('c8').scrollIntoView({behavior:'smooth'});">双角平分线</button>
-				<button onclick="document.getElementById('c9').scrollIntoView({behavior:'smooth'});">截长补短</button>
-				<button onclick="document.getElementById('c10').scrollIntoView({behavior:'smooth'});">三角形比例</button>
+				<button onclick="document.getElementById('c1').scrollIntoView({behavior:'smooth'});" class="btn">猪蹄</button>
+				<button onclick="document.getElementById('c2').scrollIntoView({behavior:'smooth'});" class="btn">双平</button>
+				<button onclick="document.getElementById('c3').scrollIntoView({behavior:'smooth'});" class="btn">中线倍长</button>
+				<button onclick="document.getElementById('c4').scrollIntoView({behavior:'smooth'});" class="btn">八字</button>
+				<button onclick="document.getElementById('c5').scrollIntoView({behavior:'smooth'});" class="btn">燕尾</button>
+				<button onclick="document.getElementById('c6').scrollIntoView({behavior:'smooth'});" class="btn">K字</button>
+				<button onclick="document.getElementById('c7').scrollIntoView({behavior:'smooth'});" class="btn">雨伞</button>
+				<button onclick="document.getElementById('c8').scrollIntoView({behavior:'smooth'});" class="btn">双角平分线</button>
+				<button onclick="document.getElementById('c9').scrollIntoView({behavior:'smooth'});" class="btn">截长补短</button>
+				<button onclick="document.getElementById('c10').scrollIntoView({behavior:'smooth'});" class="btn">三角形比例</button>
 			</div>
 			<div class="card" id="c1">
 				<div style="display:flex">
@@ -174,5 +174,14 @@
 	.card:hover{
 		background: #89FAF0;
 		box-shadow: 0px 0px 8px #000;
+	}
+	button.btn{
+		transition: all .2s ease;
+		background: #F3F3F3;
+		border: 1px solid black;
+		border-radius: 3px;
+	}
+	button.btn:hover{
+		background: #DDDDDD;
 	}
 </style>
