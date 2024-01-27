@@ -44,4 +44,4 @@
 
 ## v2.0
 
-重要测试：尝试加入 latex 公式引擎（[mathjax](mathjax.org)）
+重要测试：尝试加入 latex 公式引擎（[mathjax](https://www.mathjax.org/)）
