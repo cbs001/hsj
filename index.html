@@ -8,12 +8,57 @@
 		<script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body>
+		<script>
+			'use strict';
+			function show1(){
+				document.getElementById('theorem').style.display='block';
+				document.getElementById('main').style.display='none';
+				document.getElementById('about').style.display='none';	
+			}
+			function show2(){
+				document.getElementById('theorem').style.display='none';
+				document.getElementById('main').style.display='block';
+				document.getElementById('about').style.display='none';	
+			}
+			function show3(){
+				document.getElementById('theorem').style.display='none';
+				document.getElementById('main').style.display='none';
+				document.getElementById('about').style.display='block';	
+			}
+		</script>
 		<div class="title">
 			<h1 style="">&nbsp;圣杰宝典</h1>
 			&emsp;&emsp;
-			<button onclick="document.getElementById('main').style.display='block';document.getElementById('about').style.display='none';">模型</button>
+			<button onclick="show1();">定理</button>
 			&emsp;&emsp;
-			<button onclick="document.getElementById('main').style.display='none';document.getElementById('about').style.display='block';">关于</button>
+			<button onclick="show2();">模型与方法</button>
+			&emsp;&emsp;
+			<button onclick="show3();">关于</button>
+		</div>
+		<div id="theorem" style="display:none">
+			<div class="card" id="b1" style="margin-top:80px">
+				<p>寒假作业禁止直接抄</p>
+			</div>
+			<div class="card" id="b1">
+				<div style="display:flex">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84.02857" height="54.27704" viewBox="0,0,84.02857,54.27704"><g transform="translate(-198.75387,-136.03729)"><g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill-rule="nonzero" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal"><path d="M213.07989,177.28511c0,0 2.1192,0.93397 2.59026,1.75833c0.47348,0.82859 0.2434,3.20059 0.2434,3.20059" fill="none" stroke="#ff0000" stroke-width="1.5" stroke-linecap="round"/><path d="M218.74722,182.48017c0,0 1.51181,2.1186 1.72908,3.29185c0.1544,0.83375 -0.54838,3.0839 -0.54838,3.0839" fill="none" stroke="#ff0000" stroke-width="1.5" stroke-linecap="round"/><path d="M202.45364,188.61978l79.5788,-33.29558" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/><path d="M274.23985,189.56434h-73.67532l52.77704,-52.77704" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/><text transform="translate(217.20399,179.57044) scale(0.1908,0.1908)" font-size="40" xml:space="preserve" fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">1</tspan></text><text transform="translate(222.204,187.86934) scale(0.1908,0.1908)" font-size="40" xml:space="preserve" fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">2</tspan></text></g></g></svg>
+					<div style="margin-left:12px">
+						<h2>角平分线</h2>
+						<p>定义：$\angle 1 = \angle 2$</p>
+						<p>相关内容：与平行结合得到<strong>双平模型</strong>；与垂直或中线结合得到<strong>雨伞模型</strong>；两个一起得到<strong>双角平分线模型</strong></p>
+					</div>
+				</div>
+			</div>
+			<div class="card" id="b2">
+				<div style="display:flex">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="122.2979" height="28.16728" viewBox="0,0,122.2979,28.16728"><g transform="translate(-180.22886,-154.11828)"><g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill-rule="nonzero" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" style="mix-blend-mode: normal"><path d="M185.21578,180h109.56843" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round"/><text transform="translate(180.72886,175.86828) scale(0.5,0.5)" font-size="40" xml:space="preserve" fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">A</tspan></text><text transform="translate(233.44,175.86828) scale(0.5,0.5)" font-size="40" xml:space="preserve" fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">B</tspan></text><text transform="translate(289.1166,175.86828) scale(0.5,0.5)" font-size="40" xml:space="preserve" fill="#ff0000" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">C</tspan></text><path d="M237.51381,180c0,-1.26228 1.1131,-2.28556 2.48619,-2.28556c1.37308,0 2.48619,1.02328 2.48619,2.28556c0,1.26228 -1.1131,2.28556 -2.48619,2.28556c-1.37308,0 -2.48619,-1.02328 -2.48619,-2.28556z" fill="#ff0000" stroke="#000000" stroke-width="0" stroke-linecap="butt"/></g></g></svg>
+					<div style="margin-left:12px">
+						<h2>中点</h2>
+						<p>定义：$AB = BC$</p>
+						<p>相关内容：三角形的<strong>中线</strong>；</p>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="main" style="display:block">
 			<div class="card" style="margin-top:80px;display:flex">
