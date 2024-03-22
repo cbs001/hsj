@@ -6,8 +6,6 @@
 		<title>圣杰宝典</title>
 		<script>window.MathJax={tex:{inlineMath:[['$','$']]},svg:{fontCache:'global'}};</script>
 		<script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-	</head>
-	<body>
 		<script>
 			'use strict';
 			function show1(){
@@ -25,7 +23,31 @@
 				document.getElementById('main').style.display='none';
 				document.getElementById('about').style.display='block';	
 			}
+			const search = window.location.search;
+			if(search == "?printmode"){
+				// 移除界面元素
+				document.getElementsByClassName('title')[0].remove();
+				document.getElementById('about').remove();	
+				document.getElementById('main-s').remove();
+				document.getElementById('CardHoverEffect').remove();
+				// 定理部分 UI
+				let theorem = document.getElementById('theorem');
+				theorem.style.display='block';
+				theorem.style.marginTop="10px";
+				let tmp = document.createElement('h2');
+				tmp.innerText = "定理部分";
+				theorem.insertBefore(tmp,theorem.firstChild);
+				// 模型与方法部分 UI
+				let main = document.getElementById('main');
+				main.style.display='block';
+				main.style.marginTop="10px";
+				let tmp2 = document.createElement('h2');
+				tmp2.innerText = "模型与方法部分";
+				main.insertBefore(tmp2,main.firstChild);
+			}
 		</script>
+	</head>
+	<body>
 		<div class="title">
 			<h1 style="">&nbsp;圣杰宝典</h1>
 			<div style="height:20px; margin-top:30px">
@@ -140,7 +162,7 @@
 			</div>
 		</div>
 		<div id="main" style="display:block; margin-top:80px;">
-			<div>
+			<div id="main-s">
 				<input type="text" placeholder="搜索关键词" id="inputbox">
 				<input type="checkbox" id="inputbox2">
 				全文搜索
@@ -357,15 +379,17 @@
 		margin-top: 10px;
 		transition: all .2s ease;
 	}
-	.card:hover{
-		background: #89FAF0;
-		box-shadow: 0px 0px 8px #000;
-	}
 	/*输入框*/
 	input#inputbox{
 		background: #EEE;
 		border: none;
 		padding: 5px;
 		transition: all .2s ease;
+	}
+</style>
+<style id="CardHoverEffect">
+	.card:hover{
+		background: #89FAF0;
+		box-shadow: 0px 0px 8px #000;
 	}
 </style>
