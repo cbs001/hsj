@@ -23,8 +23,7 @@
 				document.getElementById('main').style.display='none';
 				document.getElementById('about').style.display='block';	
 			}
-			const search = window.location.search;
-			if(search == "?printmode"){
+			if(window.location.search == "?printmode"){
 				// 移除界面元素
 				document.getElementsByClassName('title')[0].remove();
 				document.getElementById('about').remove();	
