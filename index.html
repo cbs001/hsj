@@ -23,26 +23,28 @@
 				document.getElementById('main').style.display='none';
 				document.getElementById('about').style.display='block';	
 			}
-			if(window.location.search == "?printmode"){
-				// 移除界面元素
-				document.getElementsByClassName('title')[0].remove();
-				document.getElementById('about').remove();	
-				document.getElementById('main-s').remove();
-				document.getElementById('CardHoverEffect').remove();
-				// 定理部分 UI
-				let theorem = document.getElementById('theorem');
-				theorem.style.display='block';
-				theorem.style.marginTop="10px";
-				let tmp = document.createElement('h2');
-				tmp.innerText = "定理部分";
-				theorem.insertBefore(tmp,theorem.firstChild);
-				// 模型与方法部分 UI
-				let main = document.getElementById('main');
-				main.style.display='block';
-				main.style.marginTop="10px";
-				let tmp2 = document.createElement('h2');
-				tmp2.innerText = "模型与方法部分";
-				main.insertBefore(tmp2,main.firstChild);
+			window.onload = function(){
+				if(window.location.search == "?printmode"){
+					// 移除界面元素
+					document.getElementsByClassName('title')[0].remove();
+					document.getElementById('about').remove();	
+					document.getElementById('main-s').remove();
+					document.getElementById('CardHoverEffect').remove();
+					// 定理部分 UI
+					let theorem = document.getElementById('theorem');
+					theorem.style.display='block';
+					theorem.style.marginTop="10px";
+					let tmp = document.createElement('h2');
+					tmp.innerText = "定理部分";
+					theorem.insertBefore(tmp,theorem.firstChild);
+					// 模型与方法部分 UI
+					let main = document.getElementById('main');
+					main.style.display='block';
+					main.style.marginTop="10px";
+					let tmp2 = document.createElement('h2');
+					tmp2.innerText = "模型与方法部分";
+					main.insertBefore(tmp2,main.firstChild);
+				}
 			}
 		</script>
 	</head>
