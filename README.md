@@ -81,3 +81,11 @@
 [定理] 斜中、平行四边形
 
 [模型] 优化钝角 SSA 全等的证明
+
+## v4.0
+
+[界面] 一键打印
+
+[定理] 角平分线定理
+
+尝试使用 svg 压缩技术减小体积，[svg压缩](https://www.apeaksoft.com/zh-CN/free-online-image-compressor/)，[html压缩](https://www.bchrt.com/tools/html-minifier/)
