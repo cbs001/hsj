@@ -89,3 +89,7 @@
 [定理] 角平分线定理
 
 尝试使用 svg 压缩技术减小体积，[svg压缩](https://www.apeaksoft.com/zh-CN/free-online-image-compressor/)，[html压缩](https://www.bchrt.com/tools/html-minifier/)
+
+## v4.1
+
+优化
