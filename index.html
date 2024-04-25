@@ -77,8 +77,16 @@
 				document.getElementById('OnPrint').disabled = 1;
 				let s = document.createElement('script');
 				let loaded = 0;
-				s.src = 'https://cdn.staticfile.net/mathjax/3.2.2/es5/tex-mml-chtml.min.js';
-				window.MathJax = { tex: { inlineMath: [['$', '$']] }, svg: { fontCache: 'global' } };
+				s.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js';
+				window.MathJax = {
+					tex: {
+						inlineMath: [['$', '$']],
+						displayMath: [['$$', '$$']],
+					},
+					svg: {
+						fontCache: 'global',
+					},
+				};
 				s.onload = () => {
 					loaded=1;
 					document.getElementById("loading").remove();
