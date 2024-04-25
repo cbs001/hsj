@@ -9,7 +9,6 @@
 			'use strict';
 			// UI 代码
 			//===================================== 
-			window.MathJax = { tex: { inlineMath: [['$', '$']] }, svg: { fontCache: 'global' } };
 			function show1() {
 				document.getElementById('theorem').style.display = 'block';
 				document.getElementById('main').style.display = 'none';
@@ -79,6 +78,7 @@
 				let s = document.createElement('script');
 				let loaded = 0;
 				s.src = 'https://cdn.staticfile.net/mathjax/3.2.2/es5/tex-mml-chtml.min.js';
+				window.MathJax = { tex: { inlineMath: [['$', '$']] }, svg: { fontCache: 'global' } };
 				s.onload = () => {
 					loaded=1;
 					document.getElementById("loading").remove();
