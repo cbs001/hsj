@@ -87,10 +87,12 @@
 				setTimeout(() => {
 					if (loaded == 0) {
 						console.warn('cdn.bootcdn.net 请求错误，尝试换源...');
+						s.remove(), s=document.createElement('script'), document.head.appendChild(s);
 						s.src = "https://fastly.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js";
 						setTimeout(() => {
 							if (loaded == 0) {
 								console.warn("fastly.jsdelivr.net请求错误，尝试换源...");
+								s.remove(), s=document.createElement('script'), document.head.appendChild(s);
 								s.src = "https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js";
 								setTimeout(() => {
 									if (loaded == 0) console.error("公式引擎加载失败");
