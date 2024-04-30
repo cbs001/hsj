@@ -73,7 +73,14 @@
 			ExitPrintMode();
 		}
 		// AES、搜索等核心代码
-		//===================================== 
+		//=====================================
+		function checkcookie() {
+			let c = document.cookie.split(';');
+			for (let i = 0; i < c.length; i++)
+				if (c[i].split("=")[0] == "key" || c[i].split("=")[0] == " key") // 有时候 key 前会多一个空格，这样处理一下防止bug
+					return c[i].split("=")[1];
+			return null;
+		}
 		window.onload = () => {
 			function __main() { // 加载搜索功能、公式
 				document.getElementById('OnPrint').disabled = 1;
@@ -140,15 +147,7 @@
 				document.getElementById("Tinputbox").addEventListener('input', f2);
 				document.getElementById("Tinputbox2").addEventListener('input', f2);
 				setTimeout(() => {
-					let ck = document.cookie.split(';')[0].split("=")[1];
-					let f = 1;
-					for (let i = 0; i < ck.length; i++) {
-						if (ck.charCodeAt(i) < 48 || ck.charCodeAt(0) > 57) {
-							f = 0;
-							break;
-						}
-					}
-					if (f == 1) document.getElementById("ClearKey").style.display = "block";
+					if (checkcookie() != null && checkcookie() != 'null') document.getElementById("ClearKey").style.display = "block";
 				}, 100);
 			}
 			let dat = document.getElementById("all-data");
@@ -189,13 +188,6 @@
 						nod.style.display = "block"; // 显示界面
 						document.getElementById("password").style.display = "none";
 						__main();
-					}
-					function checkcookie() {
-						let c = document.cookie.split(';');
-						for (let i = 0; i < c.length; i++)
-							if (c[i].split("=")[0] == "key" || c[i].split("=")[0] == " key") // 有时候 key 前会多一个空格，这样处理一下防止bug
-								return c[i].split("=")[1];
-						return null;
 					}
 					let cookie = checkcookie();
 					let f = 1;
