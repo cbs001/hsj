@@ -190,19 +190,26 @@
 						document.getElementById("password").style.display = "none";
 						__main();
 					}
-					let ck = document.cookie.split(';')[0].split("=")[1];
+					function checkcookie() {
+						let c = document.cookie.split(';');
+						for (let i = 0; i < c.length; i++)
+							if (c[i].split("=")[0] == "key" || c[i].split("=")[0] == " key") // 有时候 key 前会多一个空格，这样处理一下防止bug
+								return c[i].split("=")[1];
+						return null;
+					}
+					let cookie = checkcookie();
 					let f = 1;
-					if (ck == undefined) f = 0;
+					if (cookie == null) f = 0;
 					else {
-						for (let i = 0; i < ck.length; i++) {
-							if (ck.charCodeAt(i) < 48 || ck.charCodeAt(0) > 57) {
+						for (let i = 0; i < cookie.length; i++) {
+							if (cookie.charCodeAt(i) < 48 || cookie.charCodeAt(i) > 57) {
 								f = 0;
 								break;
 							}
 						}
 					}
-					if (f == 1 && qpow(BigInt(ck), RSA_E, RSA_N) == RSA_ANS) {
-						DecryptMain(ck);
+					if (f == 1 && qpow(BigInt(cookie), RSA_E, RSA_N) == RSA_ANS) {
+						DecryptMain(cookie);
 					} else {
 						document.getElementById("pw-b").addEventListener("click", (thisnode) => {
 							let str = "ans:" + document.getElementById("pw-t").value;
