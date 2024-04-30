@@ -192,10 +192,13 @@
 					}
 					let ck = document.cookie.split(';')[0].split("=")[1];
 					let f = 1;
-					for (let i = 0; i < ck.length; i++) {
-						if (ck.charCodeAt(i) < 48 || ck.charCodeAt(0) > 57) {
-							f = 0;
-							break;
+					if (ck == undefined) f = 0;
+					else {
+						for (let i = 0; i < ck.length; i++) {
+							if (ck.charCodeAt(i) < 48 || ck.charCodeAt(0) > 57) {
+								f = 0;
+								break;
+							}
 						}
 					}
 					if (f == 1 && qpow(BigInt(ck), RSA_E, RSA_N) == RSA_ANS) {
